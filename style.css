@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 40px;
+}
+
+
+body{
+    background-color:#ffb703;
+    text-align: center;
+}
+
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.game{
+    height: 320px;
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    background-color: white;
+}
+
+.box{
+    height:100px ;
+    width: 100px;
+    border: none;
+    font-size: 40px;
+    background-color: #023047;
+    position: relative;
+}
+
+.box:hover:not(.inactive){
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.box.inactive{
+    cursor: not-allowed;
+    background-color: #023047;
+}
+
+.winning-box {
+    position: relative;
+}
+
+.horizontal-line::before {
+    content: "";
+    position: absolute;
+    background-color: white; 
+    width: 100%; 
+    height: 5px; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%);
+}
+
+.vertical-line::before {
+    content: "";
+    position: absolute;
+    background-color: white; 
+    width: 5px; 
+    height: 100%; 
+    top: 0;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.diagonal-left-line::before {
+    content: "";
+    position: absolute;
+    background-color: white; 
+    width: 140%; 
+    height: 5px;
+    top: 50%;
+    left: -20%;
+    transform: rotate(45deg);
+}
+
+.diagonal-right-line::before {
+    content: "";
+    position: absolute;
+    background-color: white; 
+    width: 140%;
+    height: 5px;
+    top: 50%;
+    left: -20%;
+    transform: rotate(-45deg);
+}
+
+#reset-btn{
+    background-color: #ff6700;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+    
+}
+
+
+#new-btn{
+    background-color: #ff6700;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+
+#msg{
+    font-size: 8vmin;
+}
+
+
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.hide{
+    display: none;
+}
